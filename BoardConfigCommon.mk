@@ -7,7 +7,7 @@
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
-COMMON_PATH := device/oneplus/sm8250-common
+COMMON_PATH := device/oneplus/sm7250-common
 
 # A/B
 AB_OTA_UPDATER := true
@@ -55,7 +55,7 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := kona
+TARGET_BOOTLOADER_BOARD_NAME := lito
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
@@ -114,12 +114,12 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := BRAND_SHOW_FLAG=oneplus
-TARGET_KERNEL_SOURCE := kernel/oneplus/sm8250
-TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig
+TARGET_KERNEL_SOURCE := kernel/oneplus/sm7250
+TARGET_KERNEL_CONFIG := vendor/lito-perf_defconfig
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := kona
+TARGET_BOARD_PLATFORM := lito
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -194,4 +194,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Include the proprietary files BoardConfig.
-include vendor/oneplus/sm8250-common/BoardConfigVendor.mk
+include vendor/oneplus/sm7250-common/BoardConfigVendor.mk
