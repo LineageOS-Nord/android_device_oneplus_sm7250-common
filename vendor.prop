@@ -12,6 +12,7 @@ persist.vendor.audio.fluence.tmic.enabled=false
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicecomm=true
 persist.vendor.audio.fluence.voicerec=false
+persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.spv3.enable=true
 persist.vendor.audio.voicecall.speaker.stereo=true
@@ -90,13 +91,12 @@ persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 persist.vendor.bluetooth.modem_nv_support=true
-persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true
 persist.vendor.qcom.bluetooth.enable.splita2dp=true
-persist.vendor.qcom.bluetooth.soc=hastings
+persist.vendor.qcom.bluetooth.soc=cherokee
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
@@ -106,7 +106,7 @@ vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.chall
 
 # Chipset
 ro.soc.manufacturer=QTI
-ro.soc.model=SM8250
+ro.soc.model=SM7250
 
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
@@ -130,9 +130,6 @@ persist.vendor.dpmhalservice.enable=1
 
 # DRM
 drm.service.enabled=true
-
-# Fingerprint
-persist.vendor.qfp=true
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
@@ -169,9 +166,10 @@ ro.incremental.enable=yes
 # Media
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 # Netflix
-ro.netflix.bsp_rev=Q8250-19134-1
+ro.netflix.bsp_rev=Q7250-19133-1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
@@ -190,7 +188,7 @@ ro.telephony.default_network=33,22
 
 # Sensors
 persist.vendor.sensors.allow_non_default_discovery=true
-persist.vendor.sensors.sync_request=true
+persist.vendor.sensors.debug.ssc_qmi_debug=true
 
 # USB
 vendor.usb.diag.func.name=diag
